@@ -1,0 +1,19 @@
+# Lista de IPs dos equipamentos L3 (um por linha)
+# Cisco Nexus, Catalyst, Brocade, Infinera
+
+# COREs DTC 01
+RT01-DTC01
+RT02-DTC01
+
+# DISTs DTC01
+SWD01-DTC01
+SWD02-DTC01
+
+# CORES DTC02
+RT01-DTC02
+RT02-DTC02
+
+# DISTs DTC02
+SWD01-DTC02
+SWD02-DTC02
+
