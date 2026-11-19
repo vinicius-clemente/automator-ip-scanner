@@ -1,50 +1,38 @@
-# automator-ip-scanner
+# Automator IP Scanner (L3 Network Auditor)
 
-AUTOMAÇÃO PARA REALIZAR UM SCAN NA ESTRUTURA L3 PARA VALIDAR E PROCURAR IPS E ROTAS
+Ferramenta de automação desenvolvida em Python para varredura e auditoria de blocos e ranges de endereços IP e rotas em equipamentos de Camada 3 (L3), identificando rapidamente se um prefixo está livre ou alocado e mapeando em qual equipamento e interface ele está ativo.
 
+## Funcionalidades
 
+- **Auditoria de Ranges e Rotas L3:** Conecta-se via SSH aos roteadores e switches L3 do inventário para verificar a ocupação de blocos, rotas e endereços IP.
+- **Identificação de Alocação:** Localiza exatamente em qual equipamento e interface/sub-interface um range ou IP específico está configurado ou roteado.
+- **Prevenção de Conflitos (IPAM Check):** Valida se um bloco está livre antes de realizar novas alocações ou migrações de rede.
+- **Execução em Lote:** Varre múltiplos dispositivos de forma automatizada com tratamento de exceções SSH e timeouts.
 
-\# Automator IP Scanner (L3 Network Auditor)
+## Tecnologias Utilizadas
 
+- **Python 3.x**
+- **Netmiko / Paramiko:** Gerenciamento automatizado de sessões SSH e coleta de tabelas de roteamento e interfaces nos ativos L3.
 
+## Como Utilizar
 
-Ferramenta de automacao desenvolvida em Python para varredura e auditoria de blocos e ranges de enderecos IP em equipamentos de Camada 3 (L3), identificando rapidamente se um prefixo esta livre ou alocado e mapeando em qual equipamento e interface ele esta ativo.
+1. Clone o repositório:
 
+       git clone https://github.com/vinicius-master/automator-ip-scanner.git
+       cd automator-ip-scanner
 
+2. Instale as dependências:
 
-\## Funcionalidades
+       pip install -r requirements.txt
 
+3. Preencha o arquivo de inventário (`devices.txt`) com os endereços IP dos equipamentos L3 a serem auditados.
 
+4. Execute o script:
 
-\- \*\*Auditoria de Ranges L3:\*\* Conecta-se via SSH aos roteadores e switches L3 do inventario para verificar a ocupacao de blocos e enderecos IP.
+       python ip-scanner.py
 
-\- \*\*Identificacao de Alocacao:\*\* Localiza exatamente em qual equipamento e interface/sub-interface um range ou IP especifico esta configurado ou roteado.
+   *(Ajuste o nome do arquivo `.py` conforme o script principal na pasta).*
 
-\- \*\*Prevencao de Conflitos (IPAM Check):\*\* Valida se um bloco esta livre antes de realizar novas alocacoes ou migracoes de rede.
+## Licença
 
-\- \*\*Execucao em Lote:\*\* Varre multiplos dispositivos de forma automatizada com tratamento de excecoes SSH e timeouts.
-
-
-
-\## Tecnologias Utilizadas
-
-
-
-\- \*\*Python 3.x\*\*
-
-\- \*\*Netmiko / Paramiko:\*\* Gerenciamento de sessoes SSH e coleta de tabelas de roteamento/interfaces nos ativos L3.
-
-
-
-\## Como Utilizar
-
-
-
-1\. Clone o repositorio:
-
-&#x20;  ```bash
-
-&#x20;  git clone \[https://github.com/vinicius-master/automator-ip-scanner.git](https://github.com/vinicius-master/automator-ip-scanner.git)
-
-&#x20;  cd automator-ip-scanner
-
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
