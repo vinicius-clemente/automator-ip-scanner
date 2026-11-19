@@ -18,7 +18,7 @@ Ferramenta de automação desenvolvida em Python para varredura e auditoria de b
 
 1. Clone o repositório:
 
-       git clone https://github.com/vinicius-master/automator-ip-scanner.git
+       git clone https://github.com/vinicius-clemente/automator-ip-scanner.git
        cd automator-ip-scanner
 
 2. Instale as dependências:
